@@ -1,0 +1,270 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display", serif;
+}
+
+/* ===== NAVBAR DESKTOP ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: #ffffff;
+  position: relative;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 24px;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: #1f2933;
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none; /* desktop e hidden */
+}
+
+.hero {
+  min-height: 100vh;
+
+  background: linear-gradient(180deg, #f3f5f7 0%, #e9eff4 60%, #dde5ec 100%);
+
+  position: relative;
+  padding: 3rem;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.8rem;
+  width: 100%;
+}
+
+/* TEXT SIDE */
+.hero-text {
+  max-width: 35rem;
+  color: #1f2933;
+  margin-left: 6rem;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin: 0 0 1.3rem 0;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #1f2933;
+  margin-bottom: 35px;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-primary {
+  background-color: #250202;
+  color: #fff;
+  padding: 0.9rem 1.9rem;
+  border-radius: 1.9rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #331111;
+}
+
+.btn-secondary {
+  border: 2px solid #cfd6dd;
+  color: #1f2933;
+  padding: 0.9rem 1.9rem;
+  border-radius: 1.9rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #d6a06a;
+  color: #2b1b12;
+}
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+/* IMAGE */
+.hero-image img {
+  width: 32.5rem;
+  max-width: none; /* IMAGE বড় */
+  height: 32.5rem;
+}
+
+/* SECTIONS */
+.section {
+  padding: 5rem 8%;
+}
+
+.light {
+  background: #f9fafb;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* PROJECTS */
+.projects {
+  display: flex;
+  gap: 1.9rem;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  flex: 1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin: 20px 20px 10px;
+}
+
+.project-card p {
+  margin: 0 20px 20px;
+  color: #4b5563;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+  padding: 0 20px 25px;
+}
+
+.project-links a {
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.project-links a:first-child {
+  background: #e5533d;
+  color: #fff;
+}
+
+.project-links a:last-child {
+  border: 1px solid #cfd6dd;
+  color: #1f2933;
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.skills span {
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+/* SERVICES */
+.services {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #111827;
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 48rem) {
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .navbar nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+
+    display: none; /* hidden by default */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    padding: 20px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+  }
+
+  .navbar nav.active {
+    display: flex; /* JS toggles this */
+  }
+
+  .navbar nav a {
+    font-size: 1.1rem;
+  }
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.3rem;
+  }
+  .projects {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  .project-card {
+    width: 100%;
+  }
+  .project-card img {
+    width: 100%;
+    height: auto;
+  }
+}
