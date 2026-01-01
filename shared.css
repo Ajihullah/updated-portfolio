@@ -244,21 +244,32 @@ body {
   .navbar nav a {
     font-size: 1.1rem;
   }
+  .hero {
+    width: 100%;
+    min-height: 100vh;
+    padding: 16rem 1.3rem 2.5rem;
+  }
   .hero-content {
+    width: 100%;
+    max-width: 100%;
     flex-direction: column;
     text-align: center;
+    margin: 0;
   }
 
   .hero-text h1 {
     font-size: 1.9rem; /* mobile friendly */
     line-height: 1.25;
+    width: 100%;
+    max-width: 100%;
     text-align: center;
   }
 
   .hero-text p {
     font-size: 1rem;
     line-height: 1.6;
-    max-width: 90%;
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto 24px;
     text-align: center;
   }
