@@ -26,7 +26,30 @@ body {
 }
 
 .menu-toggle {
-  display: none; /* desktop e hidden */
+  width: 1.9rem;
+  height: 1.4rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.menu-toggle span {
+  height: 3px;
+  width: 100%;
+  background: #1f2933;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .hero {
@@ -71,8 +94,8 @@ body {
 }
 
 .btn-primary {
-  background-color: #250202;
-  color: #fff;
+  border: 2px solid #cfd6dd;
+  color: #1f2933;
   padding: 0.9rem 1.9rem;
   border-radius: 1.9rem;
   text-decoration: none;
@@ -81,7 +104,8 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #331111;
+  background-color: #d6a06a;
+  color: #2b1b12;
 }
 
 .btn-secondary {
@@ -214,31 +238,36 @@ body {
 /* RESPONSIVE */
 @media (max-width: 48rem) {
   .menu-toggle {
-    display: block;
-    font-size: 28px;
-    cursor: pointer;
-    z-index: 1001;
+    display: flex;
   }
 
-  .navbar nav {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: #ffffff;
+  @media (max-width: 48rem) {
+    #navMenu {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: #ffffff;
 
-    display: none; /* hidden by default */
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.3rem;
+      padding: 1.9rem 0;
 
-    padding: 20px 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    z-index: 1000;
-  }
+      opacity: 0;
+      transform: translateY(-10px);
+      pointer-events: none;
 
-  .navbar nav.active {
-    display: flex; /* JS toggles this */
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    #navMenu.active {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
   }
 
   .navbar nav a {
@@ -292,4 +321,22 @@ body {
     width: 100%;
     height: auto;
   }
+  /* ===== MOBILE NAV ANIMATION ===== */
+  #navMenu {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  #navMenu.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+/* ===== WHEN MENU IS OPEN, BLUR MAIN CONTENT ===== */
+body.menu-open main {
+  filter: blur(6px);
 }
