@@ -21,3 +21,11 @@ document.addEventListener("click", (e) => {
     body.classList.remove("menu-open");
   }
 });
+
+document.querySelectorAll("#navMenu a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+    menuToggle.classList.remove("active");
+    body.classList.remove("menu-open");
+  });
+});
