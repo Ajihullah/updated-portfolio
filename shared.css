@@ -85,7 +85,7 @@ body {
 .hero {
   margin-top: 5rem;
   min-height: calc(100vh - 5rem);
-  background: linear-gradient(180deg, #f3f5f7 0%, #e9eff4 60%, #dde5ec 100%);
+  background: linear-gradient(180deg, #d6d9dd 0%, #a2b4c2 60%, #89b1d4 100%);
   padding: 0 3rem;
 }
 
@@ -98,7 +98,6 @@ body {
   margin: 0 auto;
 }
 
-/* TEXT SIDE */
 .hero-text {
   max-width: 35rem;
   color: #040414;
