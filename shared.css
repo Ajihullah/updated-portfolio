@@ -188,11 +188,11 @@ body {
 }
 
 .project-card {
-  background: #fff;
-  border-radius: 0.9rem;
+  background: white;
+  border: 2px solid #06011a;
+  border-radius: 1rem;
   overflow: hidden;
   flex: 1;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .project-card img {
@@ -317,14 +317,16 @@ body {
   }
 
   .hero-text h1 {
-    font-size: 1.9rem; /* mobile friendly */
+    font-size: 1.4rem; /* mobile friendly */
     line-height: 1.25;
+    padding: 5rem;
   }
 
   .hero-text p {
     font-size: 1rem;
     line-height: 1.6;
     margin: 0 auto 24px;
+    padding: 5rem;
   }
   .hero-image img {
     width: 90%;
