@@ -167,6 +167,7 @@ body {
 
 /* SECTIONS */
 .section {
+  background: linear-gradient(180deg, #d6d9dd 0%, #a2b4c2 60%, #89b1d4 100%);
   text-align: center;
 }
 
@@ -193,7 +194,7 @@ body {
   display: flex;
   flex-direction: column;
   background: white;
-  border: 2px solid #aeaabe;
+  border: 2px solid #13054d;
   border-radius: 1rem;
   overflow: hidden;
   align-items: center;
@@ -276,6 +277,7 @@ body {
 }
 #contact {
   text-align: center;
+  padding-bottom: 3rem;
 }
 
 #contact p {
@@ -284,7 +286,7 @@ body {
   align-items: center;
   border: 2px solid #010f11;
   border-radius: 1rem;
-  gap: 0.5rem;
+  gap: 1rem;
   padding: 0.6rem 1.4rem;
   font-size: 1.3rem;
   font-weight: 500;
@@ -302,7 +304,9 @@ body {
 /* FOOTER */
 .footer {
   text-align: center;
-  padding: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1.5rem;
   background: #111827;
   color: #fff;
 }
